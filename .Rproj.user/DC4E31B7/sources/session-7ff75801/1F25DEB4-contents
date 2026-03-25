@@ -9,7 +9,7 @@ Imputation of missing values using the Jensen-Shannon based k--NN algorithm.
 }
 
 \usage{
-knnimp(x, k = 2)
+alfa.knnimp(x, k = 2:10, a = seq(0.1, 1, by = 0.1), econ = TRUE)
 }
 
 \arguments{
@@ -19,6 +19,10 @@ A matrix with the compositional data, zeros are allowed.
 \item{k}{
 The number of nearest neighbours to use. This can be a single number or a numerical vector.
 }
+\item{a}{
+
+}
+
 }
 
 \details{
