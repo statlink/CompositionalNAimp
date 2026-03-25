@@ -1,0 +1,9 @@
+#useDynLib(fsn, .registration = TRUE)
+
+importFrom("Rast", rowsums, colmeans)
+importFrom("Rnanoflann", nn)
+importFrom("Compositional", alfadista, esova)
+
+exportPattern("^[[:alpha:]]+")
+exportPattern("^[^\\.]")
+

@@ -1,0 +1,10 @@
+#useDynLib(fsn, .registration = TRUE)
+
+importFrom("stats", optim, var, sd)
+importFrom("graphics", points, lines, axis, abline, legend)
+importFrom("quadprog", solve.QP)
+importfrom("minpack.lm", nls.lm)
+
+exportPattern("^[[:alpha:]]+")
+exportPattern("^[^\\.]")
+
