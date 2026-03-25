@@ -20,9 +20,13 @@ A matrix with the compositional data, zeros are allowed.
 The number of nearest neighbours to use. This can be a single number or a numerical vector.
 }
 \item{a}{
-
+A vector (or a single number) with the values of \eqn{\alpha} to consider.
 }
-
+\item{econ}{
+This argument is for memory saving purposes. If this is TRUE, the function will return
+only the data with the imputed missing values, otherwise it will return the initial compositional data with the imputed values.
+Evidently, the second option requires more memory.
+}
 }
 
 \details{
@@ -31,13 +35,15 @@ Missing value imputation is performed using the k--NN algorithm with the (square
 
 \value{
 A list including:
-\item{pou}{
+\item{index}{
 A vector with the rows (indexes) that contain missing values.
 }
-\item{y}{
-A list with as many elements as the number of neighbours (length of k basically).
-Each element of the list containts a matrix of the initial compositions, including the imputed missing values.
-These correspond to each value of k.
+\item{xa}{
+A list with as many elements as the number of the values of the argument "a" (\eqn{\alpha} values),
+and inside of each element there is a sub-list with as many elements as the number of neighbours (length of k basically).
+If the argument "econ" is TRUE, then each element of the list containts a matrix of the imputed compositions only.
+If the argument "econ" is FALSE, then each element contains the initial compositional data and the imputed missing
+values.
 }
 }
 
@@ -66,6 +72,6 @@ xam <- matrix(nrow = 10, ncol =  3)
 nu <- sample(1:n, 10)
 for ( vim in 1:10)  xam[vim, ] <- sample(1:p, 3)
 for ( vim in 1:10)  x[ nu[vim], xam[vim, ] ] <- NA
-mod <- knnimp(x, k = 2)
+mod <- knnimp( x, k = 2:4, a = c(0.1, 0.2) )
 }
 

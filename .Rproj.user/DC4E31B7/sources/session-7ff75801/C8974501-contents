@@ -15,7 +15,7 @@ alfa.knnimp <- function(x, k = 2:10, a = seq(0.1, 1, by = 0.1), econ = TRUE ) {
 
     names <- paste("kappa=", k, sep = "")
     y <- sapply(names, function(x) NULL)
-    for ( i in 1:length(k) )  y[[ i ]] <- x2
+    for ( i in 1:lenk )  y[[ i ]] <- x2
     names <- paste("alfa=", a, sep = "")
     xa <- sapply(names, function(x) NULL)
 
@@ -35,7 +35,7 @@ alfa.knnimp <- function(x, k = 2:10, a = seq(0.1, 1, by = 0.1), econ = TRUE ) {
         xa[[ vim ]] <- y
       }  ##  end  for ( vim in 1:length(a) ) {
     }  ##  end  for ( i in 1:length(pou) ) {
-    res <- list(pou = pou, xa = xa)
+    res <- list(index = pou, xa = xa)
 
   } else {
 
