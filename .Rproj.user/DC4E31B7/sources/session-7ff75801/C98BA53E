@@ -1,27 +1,27 @@
 {
-    "id": "76ECA2FB",
+    "id": "C98BA53E",
     "path": "~/GitHub/CompositionalNAimp/man/alfa.knnimp.Rd",
     "project_path": "man/alfa.knnimp.Rd",
     "type": "r_doc",
     "hash": "0",
     "contents": "",
     "dirty": false,
-    "created": 1774458473707.0,
+    "created": 1774458707755.0,
     "source_on_save": false,
     "relative_order": 1,
     "properties": {
         "tempName": "Untitled1",
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "27,8",
-        "scrollLine": "24"
+        "cursorPosition": "69,12",
+        "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1774458596,
+    "lastKnownWriteTime": 1774458689,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1774458596430,
+    "last_content_update": 1774458689,
     "read_only": false,
     "read_only_alternatives": []
 }

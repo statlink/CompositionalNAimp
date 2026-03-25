@@ -32,7 +32,8 @@ values. Evidently, the second option requires more memory.
 \details{
 Missing value imputation is performed using the \eqn{\alpha}--k--NN algorithm with the (squared)
 Jensen-Shanon divergence. The difference from the simple k--NN algorithm is that instead of computing the
-simple arithmetic mean to impute the missing values, we compute the Frechet mean.
+simple arithmetic mean to impute the missing values, we compute the Frechet mean
+(Tsagris, Preston and Wood, 2011).
 }
 
 \value{
@@ -42,10 +43,10 @@ A vector with the rows (indexes) that contain missing values.
 }
 \item{xa}{
 A list with as many elements as the number of the values of the argument "a" (\eqn{\alpha} values),
-and inside of each element there is a sub-list with as many elements as the number of neighbours (length of k basically).
-If the argument "econ" is TRUE, then each element of the list containts a matrix of the imputed compositions only.
-If the argument "econ" is FALSE, then each element contains the initial compositional data and the imputed missing
-values.
+and inside of each element there is a sub-list with as many elements as the number of neighbours
+(length of k basically). If the argument "econ" is TRUE, then each element of the list containts a
+matrix of the imputed compositions only. If the argument "econ" is FALSE, then each element contains
+the initial compositional data and the imputed missing values.
 }
 }
 
@@ -53,6 +54,10 @@ values.
 Tsagris M., Alenazi A. and Stewart C. (2026). A Jensen--Shannon divergence based k--NN algorithm
 for missing value imputation in compositional data.
 Journal of Applied Statistics (Accepted for publication).
+
+Tsagris M.T., Preston S. and Wood A.T.A. (2011). A data-based power transformation for compositional data.
+In Proceedings of the 4th Compositional Data Analysis Workshop, Girona, Spain.
+https://arxiv.org/pdf/1106.1451.pdf
 }
 
 \author{
@@ -62,7 +67,7 @@ R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr}.
 }
 
 \seealso{
-\code{\link{cv.knnimp}
+\code{\link{knnimp}
 }
 }
 
