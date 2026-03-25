@@ -48,6 +48,15 @@ The optimal value of k.
 \item{runtime}{
 The runtime of the cross-validation procedure.
 }
+
+\item{pou}{
+A vector with the rows (indexes) that contain missing values.
+}
+\item{y}{
+A list with as many elements as the number of neighbours (length of k basically).
+Each element of the list containts a matrix of the initial compositions, including the imputed missing values.
+These correspond to each value of k.
+}
 }
 
 \references{
