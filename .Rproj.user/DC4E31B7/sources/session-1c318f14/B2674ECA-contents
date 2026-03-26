@@ -1,0 +1,10 @@
+#useDynLib(fsn, .registration = TRUE)
+
+importFrom("Rfast", rowsums, colmeans)
+importFrom("Rnanoflann", nn)
+importFrom("Compositional", alfadista, esova, frechet)
+importFrom("graphics", "filled.contour")
+
+exportPattern("^[[:alpha:]]+")
+exportPattern("^[^\\.]")
+
